@@ -8,7 +8,7 @@
     "dev": "node ./packages/cli/index.cjs"
   },
   "type": "module",
-  "private": true,
+  "private": false,
   "keywords": [
     "uni app",
     "fteam"
