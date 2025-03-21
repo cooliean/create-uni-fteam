@@ -1,6 +1,6 @@
 {
   "name": "create-uni-ft",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "changelog": "changeset add",
     "change-version": "changeset version",
