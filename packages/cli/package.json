@@ -1,6 +1,6 @@
 {
   "name": "create-uni-ft",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "main": "index.js",
   "packageManager": "pnpm@9.15.2",
   "type": "module",
@@ -19,11 +19,11 @@
   "scripts": {
     "dev": "node index.cjs"
   },
-  "homepage": "https://github.com/cooliean/create-uni-ft",
+  "homepage": "https://gitee.com/cooliean/create-uni-ft",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cooliean/create-uni-ft.git"
+    "url": "git+https://gitee.com/cooliean/create-uni-ft.git"
   },
-  "bugs": "https://github.com/cooliean/create-uni-ft/issues",
+  "bugs": "https://gitee.com/cooliean/create-uni-ft/issues",
   "keywords": []
 }
