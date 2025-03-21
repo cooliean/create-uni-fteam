@@ -1,0 +1,29 @@
+{
+  "name": "create-uni-ft",
+  "version": "1.0.3",
+  "main": "index.js",
+  "packageManager": "pnpm@9.15.2",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Cooliean <cooliean@qq.com>",
+  "license": "MIT",
+  "description": "An easy way to quickly build the uniapp project",
+  "bin": {
+    "create-uni-plus": "index.cjs"
+  },
+  "files": [
+    "index.cjs"
+  ],
+  "scripts": {
+    "dev": "node index.cjs"
+  },
+  "homepage": "https://github.com/cooliean/create-uni-ft",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cooliean/create-uni-ft.git"
+  },
+  "bugs": "https://github.com/cooliean/create-uni-ft/issues",
+  "keywords": []
+}

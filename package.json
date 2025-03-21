@@ -1,0 +1,42 @@
+{
+  "name": "create-uni-ft",
+  "version": "1.0.1",
+  "scripts": {
+    "changelog": "changeset add",
+    "change-version": "changeset version",
+    "build": "node ./scripts/build.js && node ./scripts/copy.mjs",
+    "dev": "node ./packages/cli/index.cjs"
+  },
+  "type": "module",
+  "private": true,
+  "keywords": [
+    "uni app",
+    "fteam"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.12",
+    "@inquirer/prompts": "^7.2.3",
+    "@types/cli-spinner": "^0.2.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/git-clone": "^0.2.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.10",
+    "@types/prompts": "^2.4.9",
+    "colorette": "^2.0.20",
+    "commander": "^13.1.0",
+    "esbuild": "^0.24.2",
+    "kolorist": "^1.8.0",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-packagejson": "^2.5.8",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "cli-spinner": "^0.2.10",
+    "fs-extra": "^11.3.0",
+    "git-clone": "^0.2.0",
+    "pathe": "^2.0.2"
+  }
+}
