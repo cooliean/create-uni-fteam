@@ -1,17 +1,17 @@
 {
-  "name": "create-uni-ft",
-  "version": "1.0.3",
+  "name": "create-uni-fteam",
+  "version": "1.0.1",
   "main": "index.js",
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@10.0.0",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "author": "Cooliean <cooliean@qq.com>",
   "license": "MIT",
-  "description": "An easy way to quickly build the uniapp project",
+  "description": "A simple method to rapidly set up the uniapp project.",
   "bin": {
-    "create-uni-plus": "index.cjs"
+    "create-uni-fteam": "index.cjs"
   },
   "files": [
     "index.cjs"
@@ -19,11 +19,11 @@
   "scripts": {
     "dev": "node index.cjs"
   },
-  "homepage": "https://gitee.com/cooliean/create-uni-ft",
+  "homepage": "https://gitee.com/cooliean/create-uni-fteam",
   "repository": {
     "type": "git",
-    "url": "git+https://gitee.com/cooliean/create-uni-ft.git"
+    "url": "git+https://gitee.com/cooliean/create-uni-fteam.git"
   },
-  "bugs": "https://gitee.com/cooliean/create-uni-ft/issues",
+  "bugs": "https://gitee.com/cooliean/create-uni-fteam/issues",
   "keywords": []
 }

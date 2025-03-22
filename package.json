@@ -1,42 +1,56 @@
 {
-  "name": "create-uni-ft",
-  "version": "1.0.2",
+  "name": "create-uni-fteam",
+  "version": "1.0.0",
   "scripts": {
-    "changelog": "changeset add",
-    "change-version": "changeset version",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "release": "npm run build && npm run changeset && npm run changeset:version",
     "build": "node ./scripts/build.js && node ./scripts/copy.mjs",
-    "dev": "node ./packages/cli/index.cjs"
+    "dev": "pnpm build && node ./packages/cli/index.cjs",
+    "pub": "cd ./packages/cli && pnpm publish",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepublishOnly": "nr build",
+    "typecheck": "tsc --noEmit"
   },
   "type": "module",
   "private": false,
   "keywords": [
-    "uni app",
+    "uniapp",
+    "template",
     "fteam"
   ],
+  "bin": {
+    "create-uni-fteam": "packages/cli/index.cjs"
+  },
   "author": "",
   "license": "MIT",
-  "description": "",
+  "description": "A simple method to rapidly set up the uniapp project.",
   "devDependencies": {
     "@changesets/cli": "^2.27.12",
-    "@inquirer/prompts": "^7.2.3",
-    "@types/cli-spinner": "^0.2.3",
-    "@types/fs-extra": "^11.0.4",
-    "@types/git-clone": "^0.2.4",
-    "@types/inquirer": "^9.0.7",
-    "@types/node": "^22.10.10",
+    "@antfu/ni": "^0.21.12",
+    "@antfu/utils": "^0.7.7",
+    "@types/ejs": "^3.1.5",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^18.19.11",
     "@types/prompts": "^2.4.9",
-    "colorette": "^2.0.20",
-    "commander": "^13.1.0",
-    "esbuild": "^0.24.2",
+    "@uni-helper/eslint-config": "^0.0.5",
+    "bumpp": "^9.3.0",
+    "ejs": "^3.1.9",
+    "esbuild": "^0.18.20",
     "kolorist": "^1.8.0",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-packagejson": "^2.5.8",
+    "lint-staged": "^15.2.1",
+    "minimist": "^1.2.8",
+    "pnpm": "^8.15.1",
+    "prompts": "^2.4.2",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "cli-spinner": "^0.2.10",
-    "fs-extra": "^11.3.0",
-    "git-clone": "^0.2.0",
-    "pathe": "^2.0.2"
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

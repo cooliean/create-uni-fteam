@@ -1,17 +1,29 @@
 /* eslint-disable no-console */
+import { relative } from 'node:path'
 import { bold, green } from 'kolorist'
-import { templateList } from '../template/base/templateData'
-import type { TemplateList } from '../template/base/type'
+import { getCommand } from './getCommand'
+import type { Ora } from './loading'
 
-/* 打印完成提示 */
-export const printFinish = (projectName: string, templateName: string) => {
-  const templateData = templateList.find(v => v.defaultProjectName === templateName) as TemplateList
-  const runCode = templateData.runCode
+export function printFinish(
+  root: string,
+  cwd: string,
+  packageManager: 'pnpm' | 'npm' | 'yarn',
+  loading: Ora,
+  type?: 'base' | 'demo' | 'i18n' | 'ucharts' | 'hbx-base' | 'hbx-demo  ',
+) {
+  loading.succeed(`${bold('模板创建完成！')}`)
+  console.log()
+  if (root !== cwd) {
+    const cdProjectName = relative(cwd, root)
+    console.log(
+      `  ${bold(green(`cd ${cdProjectName.includes(' ') ? `"${cdProjectName}"` : cdProjectName}`))}`,
+    )
+  }
+  console.log(`  ${bold(green(getCommand(packageManager, 'i')))}`)
+  if (type && type.startsWith('hbx-'))
+    console.log(`  ${bold(green('请通过 HBuilderX 打开项目并运行！'))}`)
+  else
+    console.log(`  ${bold(green(getCommand(packageManager, 'dev')))}`)
 
-  console.log(
-    `  ${bold(green(`cd ${projectName}`))}`
-  )
-  console.log(`  ${bold(green('pnpm install'))}`)
-  console.log(`  ${bold(green(runCode))}`)
-  console.log();
+  console.log()
 }

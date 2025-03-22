@@ -1,11 +1,13 @@
-# create-uni-ft
+# create-uni-fteam
 
-## 1.0.2
-
-### Patch Changes
-
-- 修改了项目默认地址
+## 1.0.1
 
 ### Patch Changes
 
-- create-uni-plus 初始化
+- 优化一些提示
+
+## 1.0.0
+
+### Patch Changes
+
+- init commit
