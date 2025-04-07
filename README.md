@@ -1,6 +1,6 @@
 # ✨ create-uni-fteam
 
-> 本工具代码来源 [create-unibest](https://github.com/feige996/unibest)
+> 感谢 [create-unibest](https://github.com/feige996/unibest) 
 > 
 > 项目由来：因为有一些组件库是私有的，所以需要一个命令行工具来快速创建项目，主要是为了方便自己，如果有侵犯权问题，请联系我
 
